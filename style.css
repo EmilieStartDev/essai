@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*pour contenir le padding à l'interieur de la div, sinon, en augmentant le padding, la taille de la DIV augmente et se deforme*/
+    text-decoration: none; /*supprime le soulignement de tous les liens*/
+}
+
+html{
+    font-size: 62.5%;/*au lieu que 1rem= 16px=100%, on met par defaut 62.5% ce qui correspnd ) 10px, donc la valeur de reference sera de 10px qui sert de reference pour le rem (au lieu 1 rem = 16px à 100%, à 65%; 1 rem=10px. si on veut 20px, il suffit de mettre 2rem*/
+}
+
+body{
+    font-size: 1.4rem;/*soit 14px*/
+    font-family: 'Lilita One', cursive;
+    color: rgb(19, 19, 19);
+    background-color: rgb(74, 69, 69);
+    
+}
+
+.big-sign{
+    height: 15vh;
+    font-size: 1.8em;
+    color : black
+}
+
+.score-sign{
+    border-radius: 30px;
+background: #7A306C;
+box-shadow:  20px 20px 60px #68295c,
+             -20px -20px 60px #8c377c;
+}
+
+.time-sign{
+    border-radius: 30px;
+    background: #81F495;
+    box-shadow:  20px 20px 60px #6ecf7f,
+                 -20px -20px 60px #94ffab;
+}
+
+.consigne{
+    color:#4b7a28;
+    font-size: 4rem;
+}
+/*couleur
+#7A306C
+#8E8DBE
+#A9E4EF
+#81F495
+#96F550
+*/
+/*
+.container{
+    /*les proprietés ici s'appliquerons donc aux enfants de container. on veut placer tous les enfant au centre, horitontalt et verticalmt*//*
+    height: 100vh;/*relative à la hauteur de la zone visible de l'appareil. 100% = occupe toute la zone d'affichage*/
+   /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E2337;
+}
+*/
+/*
+body{
+    height: 100vh;
+}
+*/
+
+/*
+.container-header{
+    height: 30vh;
+}
+
+
+.container-balls{
+    height: 30vh;
+}
+*/
+
+
+/*
+#replay{
+    display: flex;
+    background-color: white;
+    padding: 2em;
+    
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+*/
+
+#replay{
+    border-radius: 50%;
+    padding: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.rowBall{
+    height:65vh ;
+    width: 100%;
+}
+
+
+
+/*
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+*/
+
+/*revoir placement des bulles pour aller sur tout l"ecran*/
+#btn-red{
+    border-radius: 50%;
+    background: #7A306C;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    animation-name: rouge;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    height: 70px;
+    width: 70px;
+
+    
+}
+
+#btn-blue{
+    background-color:#8E8DBE;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: bleu; /*la valeur bleu est reprise pour nommer keyframe*/
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+#btn-purple{
+    background-color:#A9E4EF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    animation-name:violets; /*la valeur bleu est reprise pour nommer keyframe*/
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#btn-green{
+    background-color:#81F495;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: green; /*la valeur bleu est reprise pour nommer keyframe*/
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+
+#btn-pink{
+    background-color:#96F550;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: pink; /*la valeur bleu est reprise pour nommer keyframe*/
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+
+
+/*animation cercle rouge se deplacant dans le sens antihoraire*/
+/*gros violet*/
+@keyframes rouge{
+    0% {left:0px; top: 0px;}
+    25% {left:70%; top: 0px;}
+    50%{left:70%; top: 70%;}
+    75%{left:0px; top: 70%;}
+    100%{left:0px; top: 0px;}
+}
+
+/*animation cercle bleu se deplacant dans le sens antihoraire*/
+/*petit violet*/
+@keyframes bleu{
+    0% {left:0%; top: 30%;}
+    25% {left:10%;; top: 90%;} 
+    50%{left:90%; top: 90%;}
+    60%{left:10%; top: 90%;}
+    65%{left:90%; top: 90%;}
+    75%{left:90%; top: 10%;}
+    100%{left:10%;; top: 10%;}
+}
+
+/*bleu ciel*/
+@keyframes violets{
+    0% {left:10%; top: 10%;}
+    25% {left:10%; top: 80%}
+    50%{left:80%; top: 10%;}
+    75%{left:80%; top: 10%;}
+    100%{left:10%; top: 80%;}
+}
+
+/*
+@keyframes green{
+    0% {left:0px; top: 0px;}
+    25% {left:0px; top: 400px;}
+    50%{left:400px; top: 400px;}
+    75%{left:400px; top: 0px;}
+    100%{left:0px; top: 0px;}
+}
+*/
+/*gros vert clair*/
+@keyframes green{
+    0% {left:0%; top: 0%;}
+    25% {left:0%; top: 70%;}
+    35% {left:0%; top: 35%;}
+    50%{left:70%; top: 70%;}
+    75%{left:70%; top: 0%;}
+    100%{left:0%; top: 0%;}
+}
+
+/*gros vert flash*/
+@keyframes pink{
+    0% {left:50%; top: 0%;}
+    25% {left:0%; top: 80%;}
+    50%{left:70%; top: -20%;}
+    75%{left:50%; top: 50%;}
+    100%{left:50%; top: 0%;}
+}

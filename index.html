@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--bootsrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--googlefont LILITA ONE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Modèle</title>
+</head>
+<body>
+
+
+
+
+
+
+    <div class="container-fluid container-header">
+        <div class="row mt-5">
+
+            <div class="col-2"></div>
+
+            <div class="col-8 text-center"><!--ajouter deflex-->
+                <h2 class="consigne">Cliques sur les cercles autant de fois que possible !</h2>
+            </div><!--col-->
+
+            <div class="col-2">
+                <div class="space-number"></div>
+                <button id="replay">REJOUER</button>   
+            </div><!--col-->
+        </div><!--row--> 
+
+        <div class="row big-sign">
+            <div class="col-4"></div>
+            <div class="col-2 score-sign text-center border border-5">
+                <p>SCORE : </p>
+                <h1 id="titre">0</h1>
+            </div>   <!--col-->
+
+            <div class="col-2 time-sign text-center border border-5">
+                <p>TEMPS RESTANT</p>
+                <div id="timer"></div>
+            </div><!--col-->
+            <div class="col-4"></div>
+        </div><!--row-->    
+                
+    </div>  <!--container-->   
+
+ 
+    <div class="container-fluid container-balls">
+        
+        <div class="row rowBall bg-success">
+            <div class="col-12 d-flex">
+                <div id="btn-red"></div>
+                <div id="btn-blue"></div>
+                <div id="btn-purple"></div>
+                <div id="btn-green"></div>
+                <div id="btn-pink"></div>
+           </div>
+        </div><!--row--> 
+    
+</div>  <!--container-->  
+
+
+<!--particles-->
+<script src="particles.js"></script>
+
+<!--googlefont-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script><!--tous le script juste avant fermeture body-->
+</body>
+</html>
